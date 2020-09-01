@@ -1,0 +1,10 @@
+.mat-cell, .mat-header-cell {
+  font-size: 14px;
+  min-height: 48px;
+  text-align: center;
+  border: 1px solid lightgray;
+}
+
+.flex-container {
+  justify-content: flex-end;
+}

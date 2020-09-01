@@ -1,0 +1,59 @@
+  <form [formGroup]="projectDetails" (submit)="onboardProject()">
+    <mat-form-field appearance="outline" class="col-md-4">
+      <mat-label>Abbr.</mat-label>
+      <input formControlName="nameabbr" matInput placeholder="abbreviation">
+      <mat-hint>abbreviation</mat-hint>
+      <mat-error *ngIf="hasError('nameabbr', 'required')">Abbreviated Project Name is required</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="col-md-8">
+      <mat-label>Project Name</mat-label>
+      <input formControlName="nameexp" matInput placeholder="Project Name here">
+      <mat-hint>expansion</mat-hint>
+      <mat-error *ngIf="hasError('nameexp', 'required')">Expansion Project Name is required</mat-error>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="outline" class="col-md-12">
+      <mat-label>Team Name</mat-label>
+      <input formControlName="teamname" matInput placeholder="Team Name here">
+      <mat-hint>team Name</mat-hint>
+      <mat-error *ngIf="hasError('teamname', 'required')">Team Name is required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="col-md-12">
+      <mat-label>Project ID</mat-label>
+      <input formControlName="projectid" matInput placeholder="Project ID here">
+      <mat-hint>project id</mat-hint>
+      <mat-error *ngIf="hasError('projectid', 'required')">Project ID is required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="col-md-12">
+      <mat-label>Project Code</mat-label>
+      <input formControlName="code" matInput placeholder="Project Code here">
+      <mat-hint>project code</mat-hint>
+      <mat-error *ngIf="hasError('code', 'required')">Project code is required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="col-md-12">
+      <mat-label>Sonar Qube Token</mat-label>
+      <input formControlName="token" matInput placeholder="sonar Qube Token Here">
+      <mat-hint>sonar qube token</mat-hint>
+      <mat-error *ngIf="hasError('token', 'required')">Sonar Qube Token is required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="col-md-12">
+      <mat-label>Offshore Rep</mat-label>
+      <input matInput placeholder="Offshore rep here">
+      <mat-hint>offshore rep</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="col-md-12">
+      <mat-label>Onshore Rep</mat-label>
+      <input matInput placeholder="Onshore rep here">
+      <mat-hint>onshore rep</mat-hint>
+    </mat-form-field>
+    <div class="col-md-7"></div>
+    <button mat-button class="btn btn-dark close-icon col-md-2" mat-raised-button mat-dialog-close>Cancel</button>
+    <div class="col-md-1"></div>
+    <button type="submit" class="btn btn-dark col-md-2" mat-raised-button [disabled]="projectDetails.invalid">Submit</button>
+  </form>

@@ -1,0 +1,13 @@
+.footer_bg {
+  background-color: slategray;
+}
+
+.footer_content {
+  color: darkslategray;
+  margin-left: 5px
+}
+
+.footer_power {
+  color: white;
+  margin: 5px 0px 5px 5px;
+}

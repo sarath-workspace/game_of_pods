@@ -1,0 +1,20 @@
+<mat-dialog-content>
+  <form [formGroup]="credentials">
+    <mat-form-field appearance="outline" class="col-md-12">
+      <mat-label>User Name</mat-label>
+      <input formControlName="username" matInput placeholder="User Name Here" [(ngModel)]="authenticate.user">
+      <mat-hint>User Name</mat-hint>
+      <mat-error *ngIf="hasError('username', 'required')">User Name is required</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="col-md-12">
+      <mat-label>Password</mat-label>
+      <input type="password" formControlName="password" matInput placeholder="Password here" [(ngModel)]="authenticate.passwd">
+      <mat-hint>Password</mat-hint>
+      <mat-error *ngIf="hasError('password', 'required')">Password is required</mat-error>
+    </mat-form-field>
+    <div class="col-md-7"></div>
+    <button mat-button class="btn btn-dark close-icon col-md-2" mat-raised-button mat-dialog-close>Cancel</button>
+    <div class="col-md-1"></div>
+    <button type="submit" class="btn btn-dark col-md-2" mat-raised-button [mat-dialog-close]="authenticate" [disabled]="credentials.invalid">Submit</button>
+  </form>
+</mat-dialog-content>
